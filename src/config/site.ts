@@ -38,6 +38,7 @@ export interface SiteConfig {
   };
   features: {
     enableGallery: boolean;
+    enableTestimonials: boolean;
     enableEmergencyBanner: boolean;
   };
   seo: {
@@ -107,7 +108,8 @@ export const siteConfig: SiteConfig = {
   },
 
   features: {
-    enableGallery: true,
+    enableGallery: false,
+    enableTestimonials: false,
     enableEmergencyBanner: true,
   },
 

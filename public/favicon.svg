@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="0" fill="#1f1f23"/>
-  <!-- Mini wizard hat -->
-  <path d="M16 5 C 14 12, 11 18, 9 22 L 23 22 C 21 18, 18 12, 16 5 Z" fill="#a8d977"/>
-  <path d="M6 23 C 10 20, 22 20, 26 23 L 26 25 C 22 27, 10 27, 6 25 Z" fill="#a8d977"/>
-  <!-- Four-pointed star sparkle -->
-  <path d="M24 8 L25 11 L28 12 L25 13 L24 16 L23 13 L20 12 L23 11 Z" fill="#ffffff"/>
-</svg>

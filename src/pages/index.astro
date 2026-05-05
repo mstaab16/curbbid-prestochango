@@ -18,7 +18,7 @@ import { siteConfig } from '@/config/site';
   <TrustBar />
   <ServicesGrid />
   <HowItWorks />
-  <Testimonials />
+  {siteConfig.features.enableTestimonials && <Testimonials />}
   {siteConfig.features.enableGallery && <Gallery limit={4} />}
   <About preview />
   <ServiceArea />

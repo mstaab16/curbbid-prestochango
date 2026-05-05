@@ -2,6 +2,11 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Gallery from '@/components/Gallery.astro';
 import CTABanner from '@/components/CTABanner.astro';
+import { siteConfig } from '@/config/site';
+
+if (!siteConfig.features.enableGallery) {
+  return Astro.redirect('/', 302);
+}
 ---
 
 <BaseLayout title="Gallery" description="Recent handyman projects across Round Rock, Hutto, Georgetown, and the rest of North Austin.">
