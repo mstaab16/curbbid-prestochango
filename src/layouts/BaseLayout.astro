@@ -9,11 +9,13 @@ import '@/styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, jsonLd } = Astro.props;
+const { title, description, ogImage, jsonLd } = Astro.props;
 const { colors, fonts, radius } = siteConfig.branding;
+const resolvedOgImage = new URL(ogImage ?? '/images/og-image.png', Astro.site ?? Astro.url).toString();
 ---
 
 <!doctype html>
@@ -25,7 +27,7 @@ const { colors, fonts, radius } = siteConfig.branding;
     <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <SEO title={title} description={description} jsonLd={jsonLd} />
+    <SEO title={title} description={description} ogImage={resolvedOgImage} jsonLd={jsonLd} />
     <style
       set:html={`:root {
         --site-color-primary: ${colors.primary};
