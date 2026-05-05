@@ -26,4 +26,4 @@ For most patches Preston can prime and roll-out a tight wall section so the repa
 
 ## Move-Out Specials
 
-Renting and need every old anchor hole gone before key turn-in? Preston has a flat-rate "move-out repair" package that handles a typical 1–2 bedroom in a single visit.
+Renting and need every old anchor hole gone before key turn-in? Preston has a "move-out repair" package that handles a typical 1–2 bedroom in a single visit.

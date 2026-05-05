@@ -13,7 +13,10 @@ const { form, business } = siteConfig;
   method="POST"
   class="space-y-5"
   id="contact-form"
+  name="contact"
+  data-netlify="true"
 >
+  <input type="hidden" name="form-name" value="contact" />
   <input type="hidden" name="access_key" value={form.accessKey} />
   <input type="hidden" name="subject" value={`New Quote Request - ${business.name}`} />
   <input type="hidden" name="from_name" value={business.name} />

@@ -6,21 +6,15 @@
     "category": "general"
   },
   {
-    "id": "faq-2",
-    "question": "Are you licensed and insured?",
-    "answer": "Presto Change-Os Handywork is fully insured and bonded. Texas does not require a state license for general handyman work, but for any job that legally requires one (new electrical circuits, gas, or anything requiring a permit), Preston will tell you up-front and refer you to a licensed specialist he trusts.",
-    "category": "general"
-  },
-  {
     "id": "faq-3",
     "question": "How are your jobs priced?",
-    "answer": "Most small jobs are priced as a flat-rate per visit, quoted in advance, so there are no surprises. For larger or more open-ended projects you'll get a written estimate with materials and labor itemized before any work begins. The estimate visit itself is free in the service area.",
+    "answer": "Every job is quoted in writing before any work begins, with the scope spelled out so you know exactly what you're paying for. The estimate visit itself is free in the service area.",
     "category": "pricing"
   },
   {
     "id": "faq-4",
-    "question": "Is there a minimum charge?",
-    "answer": "There's no minimum trip charge in the core North Austin service area. Outside that ring, a small trip charge may apply — but Preston will quote it before you book.",
+    "question": "How small a job will you take on?",
+    "answer": "Almost any size — from a single sticky door up through a multi-day list. Preston will quote whatever you need before you book, so you always know the cost in advance.",
     "category": "pricing"
   },
   {
@@ -34,12 +28,6 @@
     "question": "Do I need to be home while you work?",
     "answer": "Not always. For inside work most clients prefer to be home for the first half hour while Preston walks the project, then they head out. Repeat clients often leave a key or a code. Whatever you're comfortable with works.",
     "category": "scheduling"
-  },
-  {
-    "id": "faq-7",
-    "question": "Do you guarantee your work?",
-    "answer": "Yes. Workmanship is warrantied for one full year. If a repair Preston did needs adjustment in that window, he comes back at no charge. Materials warranty matches the manufacturer's terms (which Preston will hand you the paperwork for).",
-    "category": "warranty"
   },
   {
     "id": "faq-8",

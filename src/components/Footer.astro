@@ -15,7 +15,9 @@ const currentYear = new Date().getFullYear();
           <h3 class="font-heading font-extrabold text-white text-base uppercase tracking-wider">{business.name}</h3>
         </div>
         <p class="text-sm mb-3 text-gray-300">{business.tagline}</p>
-        <p class="text-xs uppercase tracking-widest text-cta">{business.license}</p>
+        {business.license && (
+          <p class="text-xs uppercase tracking-widest text-cta">{business.license}</p>
+        )}
       </div>
 
       <!-- Quick Links -->

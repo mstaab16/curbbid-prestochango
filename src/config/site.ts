@@ -73,7 +73,7 @@ export const siteConfig: SiteConfig = {
       state: 'TX',
       zip: '78664',
     },
-    license: 'Insured & Bonded',
+    license: '',
     tagline: 'A Little Magic For Your Honey-Do List',
     description:
       "North Austin's spell-binding handyman. Run by Preston Kristof, Presto Change-Os Handywork conjures fast, fair fixes for homes across Round Rock, Hutto, Georgetown, and beyond — from squeaky doors to full-on transformations.",

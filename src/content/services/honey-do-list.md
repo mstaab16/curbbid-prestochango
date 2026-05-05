@@ -20,9 +20,9 @@ Most homeowners don't have a single broken thing — they have a *list*. Twenty 
 
 Tightening a wobbly ceiling fan. Re-caulking a tub. Replacing a broken outlet cover. Fixing a sticky deadbolt. Re-hanging a cabinet door. Patching a fist-sized hole in drywall. Rehanging a curtain rod that ripped out of the wall. Anchoring furniture for kid safety. Adjusting a door that won't close in the summer humidity. If it bugs you every time you walk past it, it counts.
 
-## Honest, Up-Front Pricing
+## Quotes Before Work Begins
 
-There's no minimum trip charge for jobs in the North Austin service area, and no charge for the estimate itself. You get a flat price for the visit before any tool comes out of the truck. If a job turns out simpler than expected, the price comes down — never up.
+The estimate visit itself is free in the North Austin service area. You get a written quote with the scope clearly spelled out before any tool comes out of the truck.
 
 ## Booked in a Phone Call
 
