@@ -14,7 +14,7 @@ symptoms:
 
 ## Patches That Actually Disappear
 
-A drywall patch is only as good as the texture and primer that go over it. Presto Change-Os Handywork carries a dozen spray-texture cans, hopper attachments, and finishing knives — so the repaired spot ends up matching what's around it, instead of looking like a circle of "fresh paint" forever.
+A drywall patch is only as good as the texture and primer that go over it. Presto Change-O's Handywork carries a dozen spray-texture cans, hopper attachments, and finishing knives — so the repaired spot ends up matching what's around it, instead of looking like a circle of "fresh paint" forever.
 
 ## Common Drywall Repairs
 

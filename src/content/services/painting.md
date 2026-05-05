@@ -14,7 +14,7 @@ symptoms:
 
 ## Small Paint Jobs Done Cleanly
 
-Big paint jobs are for big paint crews. Presto Change-Os Handywork is built for the smaller stuff — one room, an accent wall, a hallway, all the trim and doors in a house, or a whole-home pre-listing refresh. The result: tight cut lines, even sheen, no rollover marks, and no painter's tape ripping the new paint off when it comes down.
+Big paint jobs are for big paint crews. Presto Change-O's Handywork is built for the smaller stuff — one room, an accent wall, a hallway, all the trim and doors in a house, or a whole-home pre-listing refresh. The result: tight cut lines, even sheen, no rollover marks, and no painter's tape ripping the new paint off when it comes down.
 
 ## What's Included
 

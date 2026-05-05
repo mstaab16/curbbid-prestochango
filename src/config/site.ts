@@ -64,7 +64,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   business: {
-    name: 'Presto Change-Os Handywork',
+    name: "Presto Change-O's Handywork",
     phone: '(512) 300-8483',
     email: 'prestonkristof76@gmail.com',
     address: {
@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
     license: '',
     tagline: 'A Little Magic For Your Honey-Do List',
     description:
-      "North Austin's spell-binding handyman. Run by Preston Kristof, Presto Change-Os Handywork conjures fast, fair fixes for homes across Round Rock, Hutto, Georgetown, and beyond — from squeaky doors to full-on transformations.",
+      "North Austin's spell-binding handyman. Run by Preston Kristof, Presto Change-O's Handywork conjures fast, fair fixes for homes across Round Rock, Hutto, Georgetown, and beyond — from squeaky doors to full-on transformations.",
     hours: [
       { days: 'Monday - Friday', hours: '8:00 AM - 6:00 PM' },
       { days: 'Saturday', hours: '9:00 AM - 4:00 PM' },
@@ -114,9 +114,9 @@ export const siteConfig: SiteConfig = {
   },
 
   seo: {
-    titleTemplate: '%s | Presto Change-Os Handywork',
+    titleTemplate: "%s | Presto Change-O's Handywork",
     defaultDescription:
-      "Presto Change-Os Handywork — Preston Kristof's wizardly handyman service for North Austin. Carpentry, repairs, mounting, drywall, fixtures, and small remodels in Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, and Leander.",
+      "Presto Change-O's Handywork — Preston Kristof's wizardly handyman service for North Austin. Carpentry, repairs, mounting, drywall, fixtures, and small remodels in Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, and Leander.",
   },
 
   form: {

@@ -14,7 +14,7 @@ symptoms:
 
 ## Mounted Right the First Time
 
-A TV pulled off a wall is one of the worst phone calls Preston gets — and it's almost always because the previous installer skipped studs or used the wrong anchors for the load. Presto Change-Os Handywork uses a stud finder, a level, a torque-checked driver, and the right hardware for the wall type (drywall over wood stud, drywall over metal stud, plaster, brick veneer, or solid masonry).
+A TV pulled off a wall is one of the worst phone calls Preston gets — and it's almost always because the previous installer skipped studs or used the wrong anchors for the load. Presto Change-O's Handywork uses a stud finder, a level, a torque-checked driver, and the right hardware for the wall type (drywall over wood stud, drywall over metal stud, plaster, brick veneer, or solid masonry).
 
 ## What Gets Mounted
 

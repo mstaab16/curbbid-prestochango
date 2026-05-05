@@ -14,7 +14,7 @@ symptoms:
 
 ## Curb Appeal Without a Whole Crew
 
-Most exterior repairs aren't big enough to justify a fence company or a deck contractor — but they make the biggest difference in how your house feels coming home to. Presto Change-Os Handywork takes on the ten-board fix, the one-gate rebuild, the loose handrail, the leaning mailbox.
+Most exterior repairs aren't big enough to justify a fence company or a deck contractor — but they make the biggest difference in how your house feels coming home to. Presto Change-O's Handywork takes on the ten-board fix, the one-gate rebuild, the loose handrail, the leaning mailbox.
 
 ## What Preston Repairs Outside
 

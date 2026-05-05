@@ -14,7 +14,7 @@ symptoms:
 
 ## Carpentry With a Magician's Patience
 
-Trim is the part of a house that everyone sees and almost no one notices — until it's done badly. Presto Change-Os Handywork takes the time to scribe, cope, and miter so the joints actually disappear. No globs of caulk hiding sloppy cuts.
+Trim is the part of a house that everyone sees and almost no one notices — until it's done badly. Presto Change-O's Handywork takes the time to scribe, cope, and miter so the joints actually disappear. No globs of caulk hiding sloppy cuts.
 
 ## What Preston Builds and Repairs
 
