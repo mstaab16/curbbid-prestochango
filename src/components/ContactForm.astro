@@ -1,25 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
-import { siteConfig } from '@/config/site';
 
 const services = (await getCollection('services')).sort(
   (a, b) => a.data.order - b.data.order
 );
-const { form, business } = siteConfig;
 ---
 
 <form
-  action={form.endpoint}
+  name="contact"
   method="POST"
+  netlify
+  netlify-honeypot="bot-field"
+  action="/contact/?success=1"
   class="space-y-5"
   id="contact-form"
-  name="contact"
-  data-netlify="true"
 >
   <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="access_key" value={form.accessKey} />
-  <input type="hidden" name="subject" value={`New Quote Request - ${business.name}`} />
-  <input type="hidden" name="from_name" value={business.name} />
+  <p class="hidden">
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
     <div>
@@ -106,29 +105,13 @@ const { form, business } = siteConfig;
 </form>
 
 <script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
-    const originalText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-      });
-      if (res.ok) {
-        form.innerHTML =
-          '<div class="text-center py-8"><svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="text-2xl font-bold text-heading">Thank You!</h3><p class="mt-2 text-muted">We\'ll get back to you within 24 hours.</p></div>';
-      } else {
-        throw new Error('Failed');
-      }
-    } catch {
-      btn.disabled = false;
-      btn.textContent = originalText;
-      alert('Something went wrong. Please call us directly.');
+  // After Netlify accepts the POST, the page reloads with ?success=1.
+  // Swap the form for a thank-you panel so the user sees confirmation.
+  if (new URLSearchParams(window.location.search).get('success') === '1') {
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.outerHTML =
+        '<div class="text-center py-12 px-6 bg-surface border-l-4 border-cta clip-corner"><svg class="w-16 h-16 text-cta-hover mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="text-2xl font-heading font-extrabold uppercase tracking-wide text-heading">Spell Cast!</h3><p class="mt-2 text-muted">Preston will get back to you shortly.</p></div>';
     }
-  });
+  }
 </script>
