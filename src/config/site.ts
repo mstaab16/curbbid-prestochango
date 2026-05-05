@@ -74,7 +74,7 @@ export const siteConfig: SiteConfig = {
       zip: '78664',
     },
     license: '',
-    tagline: 'Knocking Out Your Honey-Do List',
+    tagline: 'A Little Magic For Your Honey-Do List',
     description:
       "North Austin's honest handyman. Run by Preston Kristof, Presto Change-O's Handywork tackles fast, fair fixes for homes across Round Rock, Hutto, Georgetown, and beyond — from squeaky doors to full-on transformations.",
     hours: [
