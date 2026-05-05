@@ -1,7 +1,7 @@
 ---
 title: Honey-Do List & Small Repairs
 icon: repairs
-excerpt: One trip, one wizard, dozens of small jobs vanished. Knock out your whole honey-do list in a single visit.
+excerpt: One trip, one handyman, dozens of small jobs done. Knock out your whole honey-do list in a single visit.
 order: 1
 symptoms:
   - A growing sticky-note pile of "I'll fix it this weekend"

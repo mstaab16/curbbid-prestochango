@@ -18,7 +18,7 @@ const yearsInBusiness = new Date().getFullYear() - business.foundedYear;
       <div>
         <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.2em] text-cta-hover bg-accent/30 border border-cta/40 px-3 py-1.5 mb-6">
           <span class="star4 w-3 h-3" aria-hidden="true"></span>
-          North Austin's Handyman Wizard
+          North Austin's Honest Handyman
         </p>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-heading leading-tight">
           {business.tagline}
@@ -32,7 +32,7 @@ const yearsInBusiness = new Date().getFullYear() - business.foundedYear;
             class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-cta text-primary font-bold text-lg uppercase tracking-wider rounded-cta hover:bg-cta-hover hover:text-white transition-colors no-underline shadow-lg"
           >
             <span class="star4 w-4 h-4" aria-hidden="true"></span>
-            Cast a Quote
+            Get a Quote
           </a>
           <a
             href={`tel:${business.phone.replace(/[^+\d]/g, '')}`}
@@ -48,11 +48,11 @@ const yearsInBusiness = new Date().getFullYear() - business.foundedYear;
         <div class="mt-10 flex flex-wrap gap-8">
           <div>
             <p class="text-3xl font-heading font-extrabold text-primary">{yearsInBusiness}+</p>
-            <p class="text-xs uppercase tracking-widest text-muted mt-1">Years Casting</p>
+            <p class="text-xs uppercase tracking-widest text-muted mt-1">Years in Business</p>
           </div>
           <div>
             <p class="text-3xl font-heading font-extrabold text-primary">300+</p>
-            <p class="text-xs uppercase tracking-widest text-muted mt-1">Spells Cast</p>
+            <p class="text-xs uppercase tracking-widest text-muted mt-1">Jobs Done</p>
           </div>
           <div>
             <p class="text-3xl font-heading font-extrabold text-primary">5.0</p>
@@ -78,7 +78,7 @@ const yearsInBusiness = new Date().getFullYear() - business.foundedYear;
           <!-- Logo -->
           <img
             src="/images/logo-green.png"
-            alt={`${business.name} - North Austin's wizardly handyman`}
+            alt={`${business.name} - North Austin handyman`}
             width="800"
             height="800"
             loading="eager"
