@@ -1,0 +1,131 @@
+---
+import { getCollection } from 'astro:content';
+import { siteConfig } from '@/config/site';
+
+const services = (await getCollection('services')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const { form, business } = siteConfig;
+---
+
+<form
+  action={form.endpoint}
+  method="POST"
+  class="space-y-5"
+  id="contact-form"
+>
+  <input type="hidden" name="access_key" value={form.accessKey} />
+  <input type="hidden" name="subject" value={`New Quote Request - ${business.name}`} />
+  <input type="hidden" name="from_name" value={business.name} />
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div>
+      <label for="name" class="block text-sm font-medium text-heading mb-1.5">
+        Full Name <span class="text-cta">*</span>
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        autocomplete="name"
+        class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+        placeholder="Jane Smith"
+      />
+    </div>
+    <div>
+      <label for="phone" class="block text-sm font-medium text-heading mb-1.5">
+        Phone Number <span class="text-cta">*</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        autocomplete="tel"
+        class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+        placeholder="(512) 555-0100"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-medium text-heading mb-1.5">
+      Email Address
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="email"
+      class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+      placeholder="you@example.com"
+    />
+  </div>
+
+  <div>
+    <label for="service" class="block text-sm font-medium text-heading mb-1.5">
+      Service Needed
+    </label>
+    <select
+      id="service"
+      name="service"
+      class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+    >
+      <option value="">Select a service...</option>
+      {services.map((s) => (
+        <option value={s.data.title}>{s.data.title}</option>
+      ))}
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-medium text-heading mb-1.5">
+      Tell Us About Your Project
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-y"
+      placeholder="Drop your honey-do list here. The longer the better."
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-cta text-primary font-bold text-lg uppercase tracking-wider rounded-cta hover:bg-cta-hover hover:text-white transition-colors shadow-lg cursor-pointer"
+  >
+    <span class="star4 w-4 h-4" aria-hidden="true"></span>
+    Cast a Quote
+  </button>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        form.innerHTML =
+          '<div class="text-center py-8"><svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="text-2xl font-bold text-heading">Thank You!</h3><p class="mt-2 text-muted">We\'ll get back to you within 24 hours.</p></div>';
+      } else {
+        throw new Error('Failed');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = originalText;
+      alert('Something went wrong. Please call us directly.');
+    }
+  });
+</script>

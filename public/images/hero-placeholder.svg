@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Presto Change-Os Handywork hero illustration">
+  <!-- Background panel: deep charcoal with light-green corner accent -->
+  <rect width="800" height="600" fill="#1f1f23"/>
+
+  <!-- Sci-fi grid backdrop -->
+  <g stroke="#2c2c33" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+  </g>
+
+  <!-- Light green ambient glow ring -->
+  <circle cx="400" cy="320" r="220" fill="#a8d977" opacity="0.10"/>
+  <circle cx="400" cy="320" r="160" fill="#a8d977" opacity="0.14"/>
+
+  <!-- Four-pointed star confetti -->
+  <g fill="#a8d977">
+    <path d="M120 90 L126 120 L156 126 L126 132 L120 162 L114 132 L84 126 L114 120 Z" opacity="0.85"/>
+    <path d="M680 130 L684 152 L706 156 L684 160 L680 182 L676 160 L654 156 L676 152 Z" opacity="0.7"/>
+    <path d="M700 470 L703 488 L721 491 L703 494 L700 512 L697 494 L679 491 L697 488 Z" opacity="0.6"/>
+    <path d="M90 480 L93 496 L109 499 L93 502 L90 518 L87 502 L71 499 L87 496 Z" opacity="0.7"/>
+    <path d="M390 60 L392 72 L404 74 L392 76 L390 88 L388 76 L376 74 L388 72 Z" opacity="0.55"/>
+  </g>
+
+  <!-- Wizard silhouette centered -->
+  <g transform="translate(300 130) scale(2)" fill="#a8d977">
+    <!-- Hat -->
+    <path d="M100 8 C 96 30, 88 60, 78 90 L 122 90 C 112 60, 104 30, 100 8 Z"/>
+    <path d="M100 8 C 102 4, 108 4, 110 8 C 110 14, 104 20, 100 22 C 96 18, 96 12, 100 8 Z"/>
+    <path d="M40 96 C 60 86, 140 86, 160 96 C 158 102, 140 108, 100 108 C 60 108, 42 102, 40 96 Z"/>
+
+    <!-- Head and beard under brim -->
+    <path d="M76 96 L 76 122 C 76 130, 82 134, 88 134 L 112 134 C 118 134, 124 130, 124 122 L 124 96 Z"/>
+    <path d="M82 124 C 82 130, 86 138, 90 144 C 88 150, 90 158, 94 162 C 92 168, 96 174, 100 178 C 104 174, 108 168, 106 162 C 110 158, 112 150, 110 144 C 114 138, 118 130, 118 124 C 116 132, 110 138, 100 140 C 90 138, 84 132, 82 124 Z"/>
+
+    <!-- Sawblade -->
+    <g transform="translate(48 130)">
+      <circle cx="0" cy="0" r="22"/>
+      <g>
+        <polygon points="0,-30 -3,-22 3,-22"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(45)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(90)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(135)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(180)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(225)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(270)"/>
+        <polygon points="0,-30 -3,-22 3,-22" transform="rotate(315)"/>
+      </g>
+      <circle cx="0" cy="0" r="4" fill="#1f1f23"/>
+    </g>
+
+    <!-- Hammer -->
+    <g transform="translate(116 132) rotate(28)">
+      <rect x="-3" y="-2" width="58" height="6"/>
+      <path d="M-22 -14 L 4 -14 L 4 -8 L 12 -8 L 12 12 L 4 12 L 4 6 L -22 6 C -28 6, -30 2, -30 -4 C -30 -10, -28 -14, -22 -14 Z"/>
+      <path d="M-22 -10 L -16 -4 L -22 2 Z" fill="#1f1f23"/>
+    </g>
+  </g>
+</svg>

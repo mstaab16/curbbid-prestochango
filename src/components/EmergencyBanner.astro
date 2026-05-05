@@ -1,0 +1,18 @@
+---
+import { siteConfig } from '@/config/site';
+
+const { business } = siteConfig;
+---
+
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-primary text-white py-3 shadow-lg border-t-2 border-cta lg:hidden">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-center gap-3">
+    <span class="star4 w-3 h-3 text-cta shrink-0" aria-hidden="true"></span>
+    <span class="text-xs font-heading font-bold uppercase tracking-widest">Same-Week Booking</span>
+    <a
+      href={`tel:${business.phone.replace(/[^+\d]/g, '')}`}
+      class="ml-2 inline-flex items-center gap-1 px-4 py-1.5 bg-cta text-primary font-extrabold text-sm uppercase tracking-wider no-underline hover:bg-cta-hover hover:text-white transition-colors"
+    >
+      Call Preston
+    </a>
+  </div>
+</div>

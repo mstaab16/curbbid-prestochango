@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gallery-1",
+    "title": "Mudroom Built-In with Hooks",
+    "service": "Carpentry & Trim",
+    "description": "Custom paint-grade mudroom bench with shoe cubbies, brass hook rail, and shiplap backer wall. Built on-site over two days. Round Rock, TX."
+  },
+  {
+    "id": "gallery-2",
+    "title": "Hidden-Cable TV Mount",
+    "service": "TV & Furniture Mounting",
+    "description": "75-inch flat-screen mounted with full-motion arm, in-wall HDMI and power pass-through, soundbar centered below. Georgetown, TX."
+  },
+  {
+    "id": "gallery-3",
+    "title": "Stairwell Drywall Repair",
+    "service": "Drywall & Patching",
+    "description": "Three-coat patch on a fist-sized hole at the stair landing. Knockdown texture matched and rolled out so the repair is invisible after paint. Hutto, TX."
+  },
+  {
+    "id": "gallery-4",
+    "title": "Sticky Front Door Tune-Up",
+    "service": "Doors, Locks & Weatherproofing",
+    "description": "Strike plate moved, threshold raised, bulb-style weatherstripping replaced. Door closes cleanly and the gap is gone. Cedar Park, TX."
+  },
+  {
+    "id": "gallery-5",
+    "title": "Kitchen Refresh",
+    "service": "Interior Painting & Touch-Ups",
+    "description": "Cabinets touched up, walls cut and rolled in two coats of Sherwin-Williams Snowbound, new pulls installed. Pflugerville, TX."
+  },
+  {
+    "id": "gallery-6",
+    "title": "Fence Section Rebuild",
+    "service": "Outdoor & Exterior Repairs",
+    "description": "Eight-foot fence section rebuilt after a storm-blown post. New post set in concrete, cedar pickets matched and stained. Leander, TX."
+  }
+]

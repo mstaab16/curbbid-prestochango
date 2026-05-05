@@ -1,0 +1,33 @@
+---
+import { siteConfig } from '@/config/site';
+
+const { serviceArea } = siteConfig;
+---
+
+<section class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
+        <span class="star4 w-3 h-3" aria-hidden="true"></span>
+        Where the Magic Happens
+      </p>
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">
+        Serving the {serviceArea.primary}
+      </h2>
+      <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
+        Preston covers the full ring north of Austin — Round Rock, Hutto, Georgetown and surrounding towns.
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto bg-surface p-8 border-l-4 border-cta clip-corner">
+      <ul class="columns-2 sm:columns-3 lg:columns-4 gap-x-8 space-y-2">
+        {serviceArea.cities.map((city) => (
+          <li class="flex items-center gap-2 text-heading">
+            <span class="star4 w-3 h-3 text-cta-hover shrink-0" aria-hidden="true"></span>
+            <span class="font-medium">{city}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

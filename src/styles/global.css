@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--site-color-primary);
+  --color-secondary: var(--site-color-secondary);
+  --color-accent: var(--site-color-accent);
+  --color-cta: var(--site-color-cta);
+  --color-cta-hover: var(--site-color-cta-hover);
+  --color-surface: var(--site-color-surface);
+  --color-heading: var(--site-color-text);
+  --color-muted: var(--site-color-text-muted);
+  --font-heading: var(--site-font-heading);
+  --font-body: var(--site-font-body);
+  --radius-card: var(--site-radius-card);
+  --radius-cta: var(--site-radius-cta);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body), system-ui, sans-serif;
+    color: var(--color-heading);
+    background-color: var(--site-color-background);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@layer components {
+  /* Four-pointed star aesthetic accent */
+  .star4 {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z'/></svg>") center / contain no-repeat;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z'/></svg>") center / contain no-repeat;
+  }
+
+  /* Sci-fi cornered card — subtle clipped corners */
+  .clip-corner {
+    clip-path: polygon(
+      12px 0,
+      100% 0,
+      100% calc(100% - 12px),
+      calc(100% - 12px) 100%,
+      0 100%,
+      0 12px
+    );
+  }
+}

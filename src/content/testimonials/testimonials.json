@@ -1,0 +1,56 @@
+[
+  {
+    "id": "review-1",
+    "name": "Marisol B.",
+    "rating": 5,
+    "text": "Preston knocked out a list of nine little projects we'd been putting off for over a year — in one afternoon. He was on time, fair on price, and didn't leave a single speck of dust behind. Felt like sorcery.",
+    "service": "Honey-Do List & Small Repairs",
+    "date": "2026-03-18",
+    "location": "Round Rock, TX"
+  },
+  {
+    "id": "review-2",
+    "name": "Daniel & Reagan H.",
+    "rating": 5,
+    "text": "We had three drywall holes from a recent move, including a really bad one in the stairwell. The patches are completely invisible after paint. Texture match was perfect — we genuinely cannot find them anymore.",
+    "service": "Drywall & Patching",
+    "date": "2026-01-09",
+    "location": "Hutto, TX"
+  },
+  {
+    "id": "review-3",
+    "name": "Eleanor V.",
+    "rating": 5,
+    "text": "Preston mounted our 75\" TV with the cables hidden inside the wall. He showed up with the right hardware, was meticulous about leveling, and explained everything. It looks like it was always supposed to be there.",
+    "service": "TV & Furniture Mounting",
+    "date": "2025-11-22",
+    "location": "Georgetown, TX"
+  },
+  {
+    "id": "review-4",
+    "name": "Jordan T.",
+    "rating": 5,
+    "text": "Built us a custom mudroom bench with hooks and shoe storage off a couple of inspiration photos. Quote was clear, build was clean, finish was beautiful. Already booked him for our pantry shelving next.",
+    "service": "Carpentry & Trim",
+    "date": "2026-02-04",
+    "location": "Pflugerville, TX"
+  },
+  {
+    "id": "review-5",
+    "name": "Sergio L.",
+    "rating": 5,
+    "text": "Front door wouldn't close in summer humidity. Preston shaved the strike, replaced the weatherstripping, and adjusted the threshold in under two hours. Door closes perfectly and the AC bill went down.",
+    "service": "Doors, Locks & Weatherproofing",
+    "date": "2025-09-30",
+    "location": "Cedar Park, TX"
+  },
+  {
+    "id": "review-6",
+    "name": "Hannah K.",
+    "rating": 5,
+    "text": "We had two ceiling fans, a kitchen faucet, and a garbage disposal all sitting in boxes for months. Preston installed them all in one visit and even hauled the old units away. Honest, kind, and very tidy.",
+    "service": "Light & Plumbing Fixtures",
+    "date": "2026-04-15",
+    "location": "Leander, TX"
+  }
+]

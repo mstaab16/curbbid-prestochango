@@ -1,0 +1,97 @@
+---
+import { siteConfig, navLinks } from '@/config/site';
+
+const { business } = siteConfig;
+---
+
+<!-- Overlay -->
+<div
+  id="mobile-nav-overlay"
+  class="fixed inset-0 z-50 bg-black/50 hidden"
+  aria-hidden="true"
+></div>
+
+<!-- Slide-in Nav -->
+<nav
+  id="mobile-nav"
+  class="fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-xl translate-x-full transition-transform duration-300 ease-in-out"
+  aria-label="Mobile navigation"
+>
+  <div class="flex items-center justify-between p-4 border-b border-primary/15">
+    <span class="flex items-center gap-2 font-heading font-extrabold text-primary uppercase tracking-wide text-sm">
+      <img src="/images/logo.svg" alt="" width="28" height="28" class="w-7 h-7" />
+      {business.name}
+    </span>
+    <button
+      id="mobile-nav-close"
+      type="button"
+      class="p-2 text-heading hover:text-primary transition-colors"
+      aria-label="Close menu"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="flex flex-col p-4 gap-1">
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class="py-3 px-3 text-heading font-medium rounded-lg hover:bg-surface transition-colors no-underline"
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+
+  <div class="p-4 mt-auto border-t border-gray-100">
+    <a
+      href={`tel:${business.phone.replace(/[^+\d]/g, '')}`}
+      class="flex items-center gap-2 py-2 text-primary font-semibold no-underline"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+      {business.phone}
+    </a>
+    <a
+      href="/contact"
+      class="mt-3 flex items-center justify-center gap-2 px-5 py-3 bg-cta text-primary font-bold uppercase tracking-wider rounded-cta hover:bg-cta-hover hover:text-white transition-colors no-underline w-full"
+    >
+      <span class="star4 w-3 h-3" aria-hidden="true"></span>
+      Cast a Quote
+    </a>
+    <div class="mt-4 text-sm text-muted">
+      {business.hours.map((h) => (
+        <p class="py-0.5">{h.days}: {h.hours}</p>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('mobile-nav-toggle');
+  const close = document.getElementById('mobile-nav-close');
+  const nav = document.getElementById('mobile-nav');
+  const overlay = document.getElementById('mobile-nav-overlay');
+
+  function openNav() {
+    nav?.classList.remove('translate-x-full');
+    overlay?.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    toggle?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    nav?.classList.add('translate-x-full');
+    overlay?.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle?.addEventListener('click', openNav);
+  close?.addEventListener('click', closeNav);
+  overlay?.addEventListener('click', closeNav);
+  nav?.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeNav));
+</script>

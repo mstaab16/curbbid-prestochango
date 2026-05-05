@@ -1,0 +1,50 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What areas do you serve?",
+    "answer": "Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, Leander, Taylor, Liberty Hill, Jonestown, and the rest of the North Austin metro. If you're outside that ring, ask anyway — Preston will tell you up-front whether the trip charge makes sense for your project.",
+    "category": "general"
+  },
+  {
+    "id": "faq-2",
+    "question": "Are you licensed and insured?",
+    "answer": "Presto Change-Os Handywork is fully insured and bonded. Texas does not require a state license for general handyman work, but for any job that legally requires one (new electrical circuits, gas, or anything requiring a permit), Preston will tell you up-front and refer you to a licensed specialist he trusts.",
+    "category": "general"
+  },
+  {
+    "id": "faq-3",
+    "question": "How are your jobs priced?",
+    "answer": "Most small jobs are priced as a flat-rate per visit, quoted in advance, so there are no surprises. For larger or more open-ended projects you'll get a written estimate with materials and labor itemized before any work begins. The estimate visit itself is free in the service area.",
+    "category": "pricing"
+  },
+  {
+    "id": "faq-4",
+    "question": "Is there a minimum charge?",
+    "answer": "There's no minimum trip charge in the core North Austin service area. Outside that ring, a small trip charge may apply — but Preston will quote it before you book.",
+    "category": "pricing"
+  },
+  {
+    "id": "faq-5",
+    "question": "How soon can you come out?",
+    "answer": "Most weeks Preston has openings within 2–5 days. Urgent items (a door that won't close, a leak, a wobbling toilet) often get same-day or next-day slots. Text or call (512) 300-8483 to check the current week's availability.",
+    "category": "scheduling"
+  },
+  {
+    "id": "faq-6",
+    "question": "Do I need to be home while you work?",
+    "answer": "Not always. For inside work most clients prefer to be home for the first half hour while Preston walks the project, then they head out. Repeat clients often leave a key or a code. Whatever you're comfortable with works.",
+    "category": "scheduling"
+  },
+  {
+    "id": "faq-7",
+    "question": "Do you guarantee your work?",
+    "answer": "Yes. Workmanship is warrantied for one full year. If a repair Preston did needs adjustment in that window, he comes back at no charge. Materials warranty matches the manufacturer's terms (which Preston will hand you the paperwork for).",
+    "category": "warranty"
+  },
+  {
+    "id": "faq-8",
+    "question": "Can you take on bigger projects, like a full bathroom remodel?",
+    "answer": "Presto Change-Os Handywork is built for small-to-medium projects — single rooms, repairs, finish carpentry, and improvements that take 1–5 days. For full kitchen or bathroom remodels Preston will refer you to a trusted general contractor. For everything in between, ask and he'll tell you honestly whether it's a fit.",
+    "category": "general"
+  }
+]

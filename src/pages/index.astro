@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/Hero.astro';
+import TrustBar from '@/components/TrustBar.astro';
+import ServicesGrid from '@/components/ServicesGrid.astro';
+import HowItWorks from '@/components/HowItWorks.astro';
+import Testimonials from '@/components/Testimonials.astro';
+import Gallery from '@/components/Gallery.astro';
+import About from '@/components/About.astro';
+import ServiceArea from '@/components/ServiceArea.astro';
+import CTABanner from '@/components/CTABanner.astro';
+import FAQ from '@/components/FAQ.astro';
+import { siteConfig } from '@/config/site';
+---
+
+<BaseLayout title="Home">
+  <Hero />
+  <TrustBar />
+  <ServicesGrid />
+  <HowItWorks />
+  <Testimonials />
+  {siteConfig.features.enableGallery && <Gallery limit={4} />}
+  <About preview />
+  <ServiceArea />
+  <CTABanner />
+  <FAQ limit={5} />
+</BaseLayout>

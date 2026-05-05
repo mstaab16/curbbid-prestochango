@@ -1,0 +1,29 @@
+---
+import { siteConfig } from '@/config/site';
+
+const yearsInBusiness = new Date().getFullYear() - siteConfig.business.foundedYear;
+
+const badges = [
+  { label: 'Insured & Bonded' },
+  { label: 'Free On-Site Estimates' },
+  { label: '5-Star Rated' },
+  { label: `${yearsInBusiness}+ Years Casting Spells` },
+  { label: '1-Year Workmanship Warranty' },
+];
+---
+
+<section class="bg-white border-b border-primary/15">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+      {badges.map((badge, i) => (
+        <>
+          {i > 0 && <span class="hidden md:inline star4 w-2 h-2 text-cta-hover" aria-hidden="true"></span>}
+          <div class="flex items-center gap-2 text-heading">
+            <span class="star4 w-3 h-3 text-cta-hover md:hidden" aria-hidden="true"></span>
+            <span class="text-xs font-heading font-bold uppercase tracking-widest">{badge.label}</span>
+          </div>
+        </>
+      ))}
+    </div>
+  </div>
+</section>

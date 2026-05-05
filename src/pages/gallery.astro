@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Gallery from '@/components/Gallery.astro';
+import CTABanner from '@/components/CTABanner.astro';
+---
+
+<BaseLayout title="Gallery" description="Recent handyman projects across Round Rock, Hutto, Georgetown, and the rest of North Austin.">
+  <section class="pt-16 lg:pt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
+        <span class="star4 w-3 h-3" aria-hidden="true"></span>
+        Recent Conjurings
+      </p>
+      <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-heading">Project Gallery</h1>
+      <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
+        A few recent jobs from across the North Austin metro. Real photos coming soon — these are placeholders.
+      </p>
+    </div>
+  </section>
+  <Gallery />
+  <CTABanner />
+</BaseLayout>

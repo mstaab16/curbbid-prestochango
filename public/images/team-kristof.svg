@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Preston Kristof - Owner & Resident Wizard">
+  <rect width="400" height="400" fill="#eef0ec"/>
+
+  <!-- Decorative four-pointed star confetti -->
+  <g fill="#a8d977" opacity="0.55">
+    <path d="M60 80 L64 100 L84 104 L64 108 L60 128 L56 108 L36 104 L56 100 Z"/>
+    <path d="M340 60 L343 76 L359 80 L343 84 L340 100 L337 84 L321 80 L337 76 Z"/>
+    <path d="M350 320 L353 336 L369 340 L353 344 L350 360 L347 344 L331 340 L347 336 Z"/>
+    <path d="M50 320 L52 332 L64 334 L52 336 L50 348 L48 336 L36 334 L48 332 Z"/>
+  </g>
+
+  <!-- Main wizard silhouette, scaled and centered -->
+  <g transform="translate(40 40) scale(1.6)" fill="#1f1f23">
+    <!-- Hat -->
+    <path d="M100 8 C 96 30, 88 60, 78 90 L 122 90 C 112 60, 104 30, 100 8 Z"/>
+    <path d="M100 8 C 102 4, 108 4, 110 8 C 110 14, 104 20, 100 22 C 96 18, 96 12, 100 8 Z"/>
+    <path d="M40 96 C 60 86, 140 86, 160 96 C 158 102, 140 108, 100 108 C 60 108, 42 102, 40 96 Z"/>
+    <path d="M70 92 L130 92 L128 96 L72 96 Z" opacity="0.55"/>
+
+    <!-- Head clipped under brim -->
+    <g>
+      <path d="M76 96 L 76 122 C 76 130, 82 134, 88 134 L 112 134 C 118 134, 124 130, 124 122 L 124 96 Z"/>
+      <!-- Beard -->
+      <path d="M82 124 C 82 130, 86 138, 90 144 C 88 150, 90 158, 94 162 C 92 168, 96 174, 100 178 C 104 174, 108 168, 106 162 C 110 158, 112 150, 110 144 C 114 138, 118 130, 118 124 C 116 132, 110 138, 100 140 C 90 138, 84 132, 82 124 Z"/>
+    </g>
+  </g>
+
+  <!-- Caption strip -->
+  <rect x="0" y="360" width="400" height="40" fill="#1f1f23"/>
+  <text x="200" y="386" text-anchor="middle" font-family="'Orbitron', system-ui, sans-serif" font-size="14" font-weight="700" fill="#a8d977" letter-spacing="2">PRESTON KRISTOF</text>
+</svg>

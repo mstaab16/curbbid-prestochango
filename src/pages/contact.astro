@@ -1,0 +1,74 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import { siteConfig } from '@/config/site';
+
+const { business } = siteConfig;
+---
+
+<BaseLayout title="Contact" description="Send Preston your honey-do list. Free quote, fast reply, North Austin metro. Call (512) 300-8483 or email prestonkristof76@gmail.com.">
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
+          <span class="star4 w-3 h-3" aria-hidden="true"></span>
+          Send the Owl
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-heading">Get a Free Quote</h1>
+        <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
+          Send Preston your list — text, call, or fill out the form. You'll usually have a same-day reply with a flat-price quote and the next available slot.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Form -->
+        <div class="lg:col-span-2">
+          <ContactForm />
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="space-y-5">
+          <div class="p-6 bg-surface border-l-4 border-cta clip-corner">
+            <h3 class="font-heading font-extrabold text-heading text-xs uppercase tracking-widest mb-2">Call or Text</h3>
+            <a
+              href={`tel:${business.phone.replace(/[^+\d]/g, '')}`}
+              class="text-2xl font-heading font-extrabold text-primary no-underline"
+            >
+              {business.phone}
+            </a>
+            <p class="mt-2 text-sm text-muted">Direct line to Preston — no call center.</p>
+          </div>
+
+          <div class="p-6 bg-surface border-l-4 border-cta clip-corner">
+            <h3 class="font-heading font-extrabold text-heading text-xs uppercase tracking-widest mb-2">Email</h3>
+            <a
+              href={`mailto:${business.email}`}
+              class="text-primary font-semibold no-underline break-all"
+            >
+              {business.email}
+            </a>
+          </div>
+
+          <div class="p-6 bg-surface border-l-4 border-cta clip-corner">
+            <h3 class="font-heading font-extrabold text-heading text-xs uppercase tracking-widest mb-2">Service Area</h3>
+            <p class="text-muted text-sm">
+              Based in {business.address.city}, {business.address.state}. Serving Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, Leander, and the rest of the North Austin metro.
+            </p>
+          </div>
+
+          <div class="p-6 bg-surface border-l-4 border-cta clip-corner">
+            <h3 class="font-heading font-extrabold text-heading text-xs uppercase tracking-widest mb-3">Hours</h3>
+            <div class="space-y-1.5">
+              {business.hours.map((h) => (
+                <div class="flex justify-between text-sm">
+                  <span class="text-muted">{h.days}</span>
+                  <span class="font-semibold text-heading">{h.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import SEO from '@/components/SEO.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import EmergencyBanner from '@/components/EmergencyBanner.astro';
+import { siteConfig } from '@/config/site';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { title, description, jsonLd } = Astro.props;
+const { colors, fonts, radius } = siteConfig.branding;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <SEO title={title} description={description} jsonLd={jsonLd} />
+    <style
+      set:html={`:root {
+        --site-color-primary: ${colors.primary};
+        --site-color-secondary: ${colors.secondary};
+        --site-color-accent: ${colors.accent};
+        --site-color-cta: ${colors.cta};
+        --site-color-cta-hover: ${colors.ctaHover};
+        --site-color-background: ${colors.background};
+        --site-color-surface: ${colors.surface};
+        --site-color-text: ${colors.text};
+        --site-color-text-muted: ${colors.textMuted};
+        --site-font-heading: ${fonts.heading}, system-ui, sans-serif;
+        --site-font-body: ${fonts.body}, system-ui, sans-serif;
+        --site-radius-card: ${radius.card};
+        --site-radius-cta: ${radius.cta};
+      }`}
+    />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    {siteConfig.features.enableEmergencyBanner && <EmergencyBanner />}
+  </body>
+</html>

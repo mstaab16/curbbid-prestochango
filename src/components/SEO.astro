@@ -1,0 +1,73 @@
+---
+import { siteConfig } from '@/config/site';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description = siteConfig.seo.defaultDescription,
+  canonical = Astro.url.href,
+  ogImage,
+  type = 'website',
+  jsonLd,
+} = Astro.props;
+
+const formattedTitle = siteConfig.seo.titleTemplate.replace('%s', title);
+
+const { business } = siteConfig;
+const businessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: business.name,
+  description: business.description,
+  telephone: business.phone,
+  email: business.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: business.address.street,
+    addressLocality: business.address.city,
+    addressRegion: business.address.state,
+    postalCode: business.address.zip,
+  },
+  areaServed: siteConfig.serviceArea.cities.map((city) => ({
+    '@type': 'City',
+    name: city,
+  })),
+  url: Astro.site?.toString(),
+};
+
+const allJsonLd = jsonLd
+  ? Array.isArray(jsonLd)
+    ? [businessJsonLd, ...jsonLd]
+    : [businessJsonLd, jsonLd]
+  : [businessJsonLd];
+---
+
+<title>{formattedTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={formattedTitle} />
+<meta property="og:description" content={description} />
+{ogImage && <meta property="og:image" content={ogImage} />}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={formattedTitle} />
+<meta name="twitter:description" content={description} />
+{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+<!-- JSON-LD Structured Data -->
+{allJsonLd.map((ld) => (
+  <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+))}
