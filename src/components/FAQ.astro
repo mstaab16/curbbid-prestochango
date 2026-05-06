@@ -30,38 +30,37 @@ const faqJsonLd = {
 };
 ---
 
-<section class="py-16 lg:py-24 bg-secondary" id="faq">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
-        <span class="star4 w-3 h-3" aria-hidden="true"></span>
-        FAQ
-      </p>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">Questions Asked Often</h2>
-      <p class="mt-4 text-lg text-muted">
-        Don't see your question? Text Preston at (512) 300-8483 and you'll have an answer fast.
+<section class="py-16 sm:py-20 lg:py-24 bg-secondary" id="faq">
+  <div class="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 sm:mb-12">
+      <p class="eyebrow"><span>FAQ</span></p>
+      <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary tracking-tight">
+        Common Questions
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-muted">
+        Don't see yours? Text Preston at <a href="tel:5123008483" class="text-primary font-semibold underline-offset-2 hover:underline">(512) 300-8483</a>.
       </p>
     </div>
 
-    <div class="space-y-3">
-      {items.map((item) => (
-        <details class="group bg-white border-l-4 border-primary hover:border-cta transition-colors">
-          <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none">
-            <span class="flex items-center gap-3 font-heading font-bold text-heading uppercase tracking-wide text-sm">
-              <span class="star4 w-3 h-3 text-cta-hover shrink-0" aria-hidden="true"></span>
-              {item.data.question}
+    <div class="border-t border-primary/15">
+      {items.map((item, i) => (
+        <details class="group border-b border-primary/15">
+          <summary class="flex items-center justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="flex items-baseline gap-3 sm:gap-4">
+              <span class="numeral text-cta-hover/80 text-sm sm:text-base shrink-0 mt-0.5 tabular-nums">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span class="font-heading font-bold text-primary text-base sm:text-lg leading-snug">
+                {item.data.question}
+              </span>
             </span>
-            <svg
-              class="w-5 h-5 text-muted shrink-0 transition-transform duration-200 group-open:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>
+            <span class="shrink-0 w-7 h-7 inline-flex items-center justify-center border border-primary/30 rounded-full text-muted group-open:bg-primary group-open:text-white group-open:border-primary transition-colors">
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </span>
           </summary>
-          <div class="px-5 pb-5 text-muted leading-relaxed">
+          <div class="pb-5 sm:pb-6 pl-9 sm:pl-12 pr-2 text-muted leading-relaxed">
             {item.data.answer}
           </div>
         </details>

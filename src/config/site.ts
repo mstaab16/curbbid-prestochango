@@ -74,15 +74,15 @@ export const siteConfig: SiteConfig = {
       zip: '78664',
     },
     license: '',
-    tagline: 'A Little Magic For Your Honey-Do List',
+    tagline: 'Handyman Services in North Austin',
     description:
-      "North Austin's honest handyman. Run by Preston Kristof, Presto Change-O's Handywork tackles fast, fair fixes for homes across Round Rock, Hutto, Georgetown, and beyond — from squeaky doors to full-on transformations.",
+      'Repairs, installs, and small projects done right. Run by Preston Kristof, serving Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, Leander, and the rest of the North Austin metro. Free quotes, careful work, fair prices.',
     hours: [
       { days: 'Monday - Friday', hours: '8:00 AM - 6:00 PM' },
       { days: 'Saturday', hours: '9:00 AM - 4:00 PM' },
       { days: 'Sunday', hours: 'By Appointment' },
     ],
-    foundedYear: 2021,
+    foundedYear: 2020,
   },
 
   branding: {
@@ -98,12 +98,12 @@ export const siteConfig: SiteConfig = {
       textMuted: '#5a5d63',
     },
     fonts: {
-      heading: '"Orbitron"',
-      body: '"Rajdhani"',
+      heading: '"Roboto Slab"',
+      body: '"Inter"',
     },
     radius: {
-      card: '0.125rem',
-      cta: '0.125rem',
+      card: '0.375rem',
+      cta: '0.375rem',
     },
   },
 
@@ -116,7 +116,7 @@ export const siteConfig: SiteConfig = {
   seo: {
     titleTemplate: "%s | Presto Change-O's Handywork",
     defaultDescription:
-      "Presto Change-O's Handywork — Preston Kristof's honest handyman service for North Austin. Carpentry, repairs, mounting, drywall, fixtures, and small remodels in Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, and Leander.",
+      "Handyman services in North Austin from Preston Kristof. Repairs, carpentry, mounting, drywall, fixtures, doors, painting, and exterior work in Round Rock, Hutto, Georgetown, Pflugerville, Cedar Park, and Leander.",
   },
 
   form: {

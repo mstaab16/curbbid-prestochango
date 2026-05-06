@@ -4,28 +4,23 @@ import { getCollection } from 'astro:content';
 const testimonials = await getCollection('testimonials');
 ---
 
-<section class="py-16 lg:py-24 bg-surface relative overflow-hidden">
-  <span class="star4 absolute top-12 left-12 w-4 h-4 text-cta opacity-30" aria-hidden="true"></span>
-  <span class="star4 absolute bottom-12 right-16 w-3 h-3 text-cta opacity-30" aria-hidden="true"></span>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 lg:py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
-        <span class="star4 w-3 h-3" aria-hidden="true"></span>
-        Word From the Faithful
-      </p>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">What Neighbors Are Saying</h2>
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">What Customers Are Saying</h2>
       <p class="mt-4 text-lg text-muted">
-        5.0 stars across every review. No exceptions, no asterisks.
+        5.0 stars across every review.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {testimonials.map((t) => (
-        <div class="relative bg-white p-6 border border-primary/10 clip-corner">
-          <span class="star4 absolute top-3 right-3 w-3 h-3 text-cta" aria-hidden="true"></span>
-          <div class="flex gap-0.5 mb-4">
+        <div class="bg-white p-6 border border-primary/10 rounded-card">
+          <div class="flex gap-0.5 mb-4 text-cta-hover">
             {Array.from({ length: t.data.rating }).map(() => (
-              <span class="star4 w-5 h-5 text-cta-hover" aria-hidden="true"></span>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.366 2.446a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.366-2.446a1 1 0 00-1.176 0l-3.366 2.446c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.075 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+              </svg>
             ))}
           </div>
           <blockquote class="text-heading leading-relaxed">
@@ -33,12 +28,12 @@ const testimonials = await getCollection('testimonials');
           </blockquote>
           <div class="mt-5 flex items-center justify-between">
             <div>
-              <p class="font-heading font-extrabold text-heading uppercase tracking-wide">{t.data.name}</p>
+              <p class="font-heading font-bold text-heading">{t.data.name}</p>
               {t.data.location && (
-                <p class="text-xs text-muted uppercase tracking-widest mt-0.5">{t.data.location}</p>
+                <p class="text-sm text-muted mt-0.5">{t.data.location}</p>
               )}
             </div>
-            <span class="text-[10px] px-2.5 py-1 bg-primary text-cta uppercase tracking-widest font-bold">
+            <span class="text-xs px-2.5 py-1 bg-primary text-white rounded font-semibold">
               {t.data.service}
             </span>
           </div>

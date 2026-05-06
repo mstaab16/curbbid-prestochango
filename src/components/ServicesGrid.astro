@@ -10,7 +10,6 @@ const iconModules = import.meta.glob('/src/assets/icons/*.svg', {
   import: 'default',
 });
 
-// Resolve all icons in frontmatter (async not allowed in template)
 const servicesWithIcons = await Promise.all(
   services.map(async (service) => {
     const iconPath = `/src/assets/icons/${service.data.icon}.svg`;
@@ -22,34 +21,35 @@ const servicesWithIcons = await Promise.all(
 );
 ---
 
-<section class="py-16 lg:py-24 bg-secondary" id="services">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
-        <span class="star4 w-3 h-3" aria-hidden="true"></span>
-        What We Do
-      </p>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">Services</h2>
-      <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
-        From the smallest squeaky hinge to a full mudroom built-in, here's what Preston handles for North Austin homeowners.
+<section class="py-16 sm:py-20 lg:py-24 bg-white" id="services">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-10 sm:mb-12">
+      <p class="eyebrow"><span>What We Do</span></p>
+      <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary tracking-tight">
+        Services
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-muted">
+        From small repairs to finish carpentry — here's what Preston handles around your house.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {servicesWithIcons.map(({ service, iconRaw }) => (
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-primary/10 border border-primary/10 rounded-card overflow-hidden">
+      {servicesWithIcons.map(({ service, iconRaw }, i) => (
         <a
           href={`/services/${service.id}`}
-          class="group relative block p-6 bg-white border border-primary/10 hover:border-cta hover:shadow-lg transition-all duration-200 no-underline clip-corner"
+          class="group relative block p-6 sm:p-7 bg-white hover:bg-secondary transition-colors duration-200 no-underline"
         >
-          <span class="star4 absolute top-3 right-3 w-3 h-3 text-cta opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></span>
-          <div class="w-12 h-12 text-cta-hover mb-4" set:html={iconRaw} />
-          <h3 class="text-lg font-heading font-extrabold text-heading uppercase tracking-wide group-hover:text-cta-hover transition-colors">
+          <span class="corner-mark">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <div class="w-11 h-11 text-cta-hover" set:html={iconRaw} />
+          <h3 class="mt-5 text-lg sm:text-xl font-heading font-extrabold text-primary leading-tight group-hover:text-cta-hover transition-colors">
             {service.data.title}
           </h3>
-          <p class="mt-2 text-sm text-muted">{service.data.excerpt}</p>
-          <span class="mt-4 inline-flex items-center text-xs uppercase tracking-widest font-bold text-cta-hover">
+          <p class="mt-2 text-sm text-muted leading-relaxed">{service.data.excerpt}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.18em] text-cta-hover">
             Learn More
-            <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
           </span>

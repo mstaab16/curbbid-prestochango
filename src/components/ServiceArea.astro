@@ -4,30 +4,27 @@ import { siteConfig } from '@/config/site';
 const { serviceArea } = siteConfig;
 ---
 
-<section class="py-16 lg:py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta-hover mb-3">
-        <span class="star4 w-3 h-3" aria-hidden="true"></span>
-        Service Area
-      </p>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-heading">
+<section class="py-16 sm:py-20 lg:py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 sm:mb-12">
+      <p class="eyebrow"><span>Service Area</span></p>
+      <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-primary tracking-tight">
         Serving the {serviceArea.primary}
       </h2>
-      <p class="mt-4 text-lg text-muted max-w-2xl mx-auto">
-        Preston covers the full ring north of Austin — Round Rock, Hutto, Georgetown and surrounding towns.
+      <p class="mt-4 text-base sm:text-lg text-muted max-w-2xl mx-auto">
+        Round Rock, Hutto, Georgetown, and surrounding towns north of Austin.
       </p>
     </div>
 
-    <div class="max-w-3xl mx-auto bg-surface p-8 border-l-4 border-cta clip-corner">
-      <ul class="columns-2 sm:columns-3 lg:columns-4 gap-x-8 space-y-2">
-        {serviceArea.cities.map((city) => (
-          <li class="flex items-center gap-2 text-heading">
-            <span class="star4 w-3 h-3 text-cta-hover shrink-0" aria-hidden="true"></span>
-            <span class="font-medium">{city}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-2 sm:gap-y-3 max-w-3xl mx-auto border-t border-b border-primary/15 py-6 sm:py-8">
+      {serviceArea.cities.map((city) => (
+        <li class="flex items-center gap-2 text-heading">
+          <svg class="w-3.5 h-3.5 text-cta-hover shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-sm sm:text-base font-medium">{city}</span>
+        </li>
+      ))}
+    </ul>
   </div>
 </section>

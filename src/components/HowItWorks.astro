@@ -1,51 +1,68 @@
 ---
 const steps = [
   {
-    number: '1',
-    title: 'Send the List',
-    description: 'Text or call (512) 300-8483 with your honey-do list — photos welcome. You\'ll usually get a same-day reply.',
+    number: '01',
+    title: 'Send Your List',
+    description: 'Text or call (512) 300-8483 with what you need fixed — photos help. Most replies happen the same day.',
   },
   {
-    number: '2',
-    title: 'Get a Quote',
+    number: '02',
+    title: 'Get a Free Quote',
     description: 'Preston comes out for a free walk-through and gives you a written quote before any work begins.',
   },
   {
-    number: '3',
-    title: 'Watch It Vanish',
-    description: 'On the booked day, the whole list disappears in a single visit. Careful work, clean cleanup.',
+    number: '03',
+    title: 'Job Done',
+    description: 'On the booked day, the whole list gets handled — careful work, clean cleanup, fair price.',
   },
 ];
 ---
 
-<section class="relative py-16 lg:py-24 bg-primary overflow-hidden">
-  <span class="star4 absolute top-10 right-1/4 w-4 h-4 text-cta opacity-50" aria-hidden="true"></span>
-  <span class="star4 absolute bottom-12 left-12 w-3 h-3 text-cta opacity-40" aria-hidden="true"></span>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <p class="inline-flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-[0.25em] text-cta mb-3">
-        <span class="star4 w-3 h-3" aria-hidden="true"></span>
-        The Incantation
-      </p>
-      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-white">How It Works</h2>
-      <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-        Three steps from "I should really fix that" to "It's gone."
+<section class="relative py-16 sm:py-20 lg:py-28 bg-primary text-white overflow-hidden">
+  <div class="absolute inset-0 blueprint-grid pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center mb-12 sm:mb-16">
+      <p class="eyebrow text-cta"><span>The Process</span></p>
+      <h2 class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight">
+        How It Works
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-white/70">
+        Three steps from first call to job done.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+    <ol class="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-8 lg:gap-x-12">
       {steps.map((step, i) => (
-        <div class="text-center relative">
+        <li class="relative flex md:block items-start gap-5">
+          {/* Mobile vertical connector */}
           {i < steps.length - 1 && (
-            <div class="hidden md:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-cta/40" />
+            <span
+              class="md:hidden absolute left-[2.5rem] top-[5.5rem] bottom-[-2.5rem] w-px bg-cta/30"
+              aria-hidden="true"
+            ></span>
           )}
-          <div class="mx-auto w-16 h-16 bg-cta text-primary flex items-center justify-center text-2xl font-heading font-extrabold shadow-lg relative z-10 clip-corner">
+          {/* Desktop horizontal connector */}
+          {i < steps.length - 1 && (
+            <span
+              class="hidden md:block absolute top-[2.25rem] left-[calc(50%+5rem)] right-[-1rem] h-px bg-cta/30"
+              aria-hidden="true"
+            ></span>
+          )}
+
+          <div class="numeral text-cta text-6xl sm:text-7xl md:text-8xl shrink-0 md:text-center md:mb-3 leading-none">
             {step.number}
           </div>
-          <h3 class="mt-6 text-xl font-heading font-extrabold text-white uppercase tracking-wide">{step.title}</h3>
-          <p class="mt-3 text-white/70 max-w-xs mx-auto">{step.description}</p>
-        </div>
+          <div class="md:text-center md:mt-2">
+            <h3 class="text-xl sm:text-2xl font-heading font-extrabold text-white tracking-tight">
+              {step.title}
+            </h3>
+            <p class="mt-2 text-white/75 leading-relaxed max-w-xs md:mx-auto text-sm sm:text-base">
+              {step.description}
+            </p>
+          </div>
+        </li>
       ))}
-    </div>
+    </ol>
   </div>
 </section>

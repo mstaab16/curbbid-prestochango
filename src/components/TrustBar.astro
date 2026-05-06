@@ -4,22 +4,26 @@ import { siteConfig } from '@/config/site';
 const yearsInBusiness = new Date().getFullYear() - siteConfig.business.foundedYear;
 
 const badges = [
-  { label: 'Free On-Site Estimates' },
-  { label: `${yearsInBusiness}+ Years in Business` },
-  { label: 'Same-Week Booking' },
+  'Free On-Site Estimates',
+  `${yearsInBusiness}+ Years Working`,
+  'Written Quotes',
 ];
 ---
 
 <section class="bg-white border-b border-primary/15">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-      {badges.map((badge, i) => (
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-12 gap-y-2.5 text-center">
+      {badges.map((label, i) => (
         <>
-          {i > 0 && <span class="hidden md:inline star4 w-2 h-2 text-cta-hover" aria-hidden="true"></span>}
-          <div class="flex items-center gap-2 text-heading">
-            <span class="star4 w-3 h-3 text-cta-hover md:hidden" aria-hidden="true"></span>
-            <span class="text-xs font-heading font-bold uppercase tracking-widest">{badge.label}</span>
-          </div>
+          {i > 0 && (
+            <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-cta-hover/60" aria-hidden="true"></span>
+          )}
+          <span class="inline-flex items-center gap-2 text-[0.78125rem] font-semibold text-heading">
+            <svg class="w-4 h-4 text-cta-hover shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            {label}
+          </span>
         </>
       ))}
     </div>

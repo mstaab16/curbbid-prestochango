@@ -91,15 +91,14 @@ const services = (await getCollection('services')).sort(
       name="message"
       rows="4"
       class="w-full px-4 py-3 border border-gray-300 rounded-card text-heading bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-y"
-      placeholder="Drop your honey-do list here. The longer the better."
+      placeholder="Tell Preston what you need fixed or installed. The more detail, the better."
     ></textarea>
   </div>
 
   <button
     type="submit"
-    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-cta text-primary font-bold text-lg uppercase tracking-wider rounded-cta hover:bg-cta-hover hover:text-white transition-colors shadow-lg cursor-pointer"
+    class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-cta text-primary font-bold text-lg rounded-cta hover:bg-cta-hover hover:text-white transition-colors shadow-md cursor-pointer"
   >
-    <span class="star4 w-4 h-4" aria-hidden="true"></span>
     Send Message
   </button>
 </form>
@@ -111,7 +110,7 @@ const services = (await getCollection('services')).sort(
     const form = document.getElementById('contact-form');
     if (form) {
       form.outerHTML =
-        '<div class="text-center py-12 px-6 bg-surface border-l-4 border-cta clip-corner"><svg class="w-16 h-16 text-cta-hover mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="text-2xl font-heading font-extrabold uppercase tracking-wide text-heading">Message Sent!</h3><p class="mt-2 text-muted">Preston will get back to you shortly.</p></div>';
+        '<div class="text-center py-12 px-6 bg-surface border-l-4 border-cta rounded-card"><svg class="w-16 h-16 text-cta-hover mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h3 class="text-2xl font-heading font-bold text-heading">Message Sent!</h3><p class="mt-2 text-muted">Preston will get back to you shortly.</p></div>';
     }
   }
 </script>
